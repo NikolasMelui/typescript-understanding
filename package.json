@@ -1,0 +1,22 @@
+{
+  "name": "typescript-understanging",
+  "version": "0.0.1",
+  "description": "New project to learn typescript!",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolasMelui/typescript-understanging.git"
+  },
+  "author": "nikolasmelui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolasMelui/typescript-understanging/issues"
+  },
+  "homepage": "https://github.com/NikolasMelui/typescript-understanging#readme",
+  "dependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
