@@ -5,6 +5,8 @@ export default class Person {
   protected age: number = 27;
 
   private _species: string = 'Default';
+  // Immutable field
+  private readonly _isAlive: string = 'alive';
 
   static type: string = 'human';
 
@@ -20,4 +22,13 @@ export default class Person {
   set species(value: string) {
     this._species = value.length > 3 ? this._species : 'Default';
   }
+
+  get isAlive() {
+    return this._isAlive;
+  }
+
+  // Bad code! Immutable field can not be changed!
+  // set isAlive(value: string) {
+  //   this._isAlive = value.length > 3 ? this._isAlive : 'Default';
+  // }
 }
