@@ -84,3 +84,13 @@ function makeArray(name: string, ...args: [string, number, object]) {
   return args;
 }
 makeArray('Nikolay', 'string', 33, { hello: 'there' });
+
+// Destructuring array
+const hobbies = ['Cooking', 'Sports'];
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
+
+// Destructuring object
+const userData = { username: 'Nikolay', age: 27 };
+const { username, age } = userData;
+const { username: myusername, age: newage } = userData;
