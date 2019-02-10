@@ -34,7 +34,9 @@ console.log(multiply(1, 2));
 let myMultiply: (a: number, b: number) => number;
 myMultiply = multiply;
 
-const complex: { data: number[]; output: (all: boolean) => number[] } = {
+type Complex = { data: number[]; output: (all: boolean) => number[] };
+
+const complex: Complex = {
   data: [1, 2, 3, 4, 5],
   output: function(all: boolean): number[] {
     return this.data;
