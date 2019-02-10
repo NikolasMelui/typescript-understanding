@@ -47,3 +47,22 @@ const complex: Complex = {
 // union types
 let myRealAge: number | string = 27;
 myRealAge = '27';
+
+if (typeof myRealAge === 'string') {
+  console.log('The type of variable is string');
+} else if (typeof myRealAge === 'number') {
+  console.log('The type of variable is number');
+}
+
+// never
+function neverReturns(): never {
+  throw new Error('An error!');
+}
+
+// Nullable Types
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+let canBeAny = null;
+// canBeAny = 12;
