@@ -11,9 +11,10 @@ const enum Color {
 const myColor: Color = Color.Blue;
 console.log(myColor);
 
-const Nikolay: { name: string; age: number } = {
+const Nikolay: { name: string; age: number | string; sayHello: () => void } = {
   name: 'Nikolay',
-  age: 27
+  age: 27,
+  sayHello: () => console.log('Hello')
 };
 
 // Return the name
@@ -42,3 +43,7 @@ const complex: Complex = {
     return this.data;
   }
 };
+
+// union types
+let myRealAge: number | string = 27;
+myRealAge = '27';
