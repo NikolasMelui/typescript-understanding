@@ -11,7 +11,7 @@ const enum Color {
 const myColor: Color = Color.Blue;
 console.log(myColor);
 
-const Nikolay = {
+const Nikolay: { name: string; age: number } = {
   name: 'Nikolay',
   age: 27
 };
