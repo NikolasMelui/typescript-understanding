@@ -6,6 +6,8 @@ export default class Person {
 
   private _species: string = 'Default';
 
+  static type: string = 'human';
+
   constructor(name: string, surname: string) {
     this.name = name;
     this.surname = surname;

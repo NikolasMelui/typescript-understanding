@@ -11,3 +11,4 @@ const nikolay = new Nikolay('Sladkiy');
 console.log(nikolay);
 
 console.log(nikolay.species);
+console.log(Person.type);
