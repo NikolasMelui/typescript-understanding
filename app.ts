@@ -66,3 +66,21 @@ let canAlsoBeNull;
 canAlsoBeNull = null;
 let canBeAny = null;
 // canBeAny = 12;
+
+// Default parameters
+const countdown = (start: number = 10): void => {
+  console.log(start);
+  while (start > 0) {
+    start--;
+  }
+  console.log('Done', start);
+};
+countdown();
+
+// Rest and spread
+const numbers = [1, 10, 88, 9, -2, -5];
+console.log(Math.max(...numbers));
+function makeArray(name: string, ...args: [string, number, object]) {
+  return args;
+}
+makeArray('Nikolay', 'string', 33, { hello: 'there' });
