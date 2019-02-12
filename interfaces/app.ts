@@ -6,6 +6,19 @@ namespace InterfacedPerson {
     greet(greetWord: string): void;
   }
 
+  class Person implements NamedPerson {
+    firstName: string;
+    greet(greetWord: string): void {
+      console.log(greetWord);
+    }
+    constructor(firstName: string) {
+      this.firstName = firstName;
+    }
+  }
+
+  const currentPerson = new Person('Nikolay');
+  currentPerson.greet('Hello!!!');
+
   const greet = (person: NamedPerson): void =>
     console.log(`Hello, ${person.firstName}`);
 
