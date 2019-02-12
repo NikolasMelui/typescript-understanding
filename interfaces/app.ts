@@ -50,4 +50,17 @@ namespace InterfacedPerson {
     value2: number
   ): number => (value1 + value2) * 2;
   console.log(myDoubleFunction(10, 20));
+
+  // Interface Inheritance
+  interface AgedPerson extends NamedPerson {
+    age: number;
+  }
+  const oldPerson: AgedPerson = {
+    age: 27,
+    firstName: 'Nikolay',
+    greet(greetWord: string): void {
+      console.log(greetWord);
+    }
+  };
+  console.log(oldPerson);
 }
