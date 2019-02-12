@@ -1,5 +1,5 @@
-/// <reference path="circleMath.ts"/>
-/// <reference path="rectangleMath.ts"/>
+/// <reference path="circle.ts"/>
+/// <reference path="rectangle.ts"/>
 import CircleMath = MyMath.Circle;
 
 console.log(CircleMath.calculateCircumference(5));
