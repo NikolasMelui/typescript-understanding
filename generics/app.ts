@@ -26,3 +26,18 @@ printAll<string>(['Apple', 'Banana', 'Some more']);
 const echo2: <T>(data: T) => T = betterEcho;
 console.log(echo2<string>('Hello there!'));
 console.log(echo2<number>(27));
+
+// Generic Class
+class SimpleMath<T extends number | string> {
+  baseValue: T;
+  multiplyValue: T;
+
+  calculate = (): number => +this.baseValue * +this.multiplyValue;
+
+  constructor(baseValue: T, multiplyValue: T) {
+    this.baseValue = baseValue;
+    this.multiplyValue = multiplyValue;
+  }
+}
+const simpleMath = new SimpleMath<number>(10, 20);
+console.log(simpleMath.calculate());
