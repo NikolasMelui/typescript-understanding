@@ -28,16 +28,16 @@ console.log(echo2<string>('Hello there!'));
 console.log(echo2<number>(27));
 
 // Generic Class
-class SimpleMath<T extends number | string> {
+class SimpleMath<T extends number | string, U extends number | string> {
   baseValue: T;
-  multiplyValue: T;
+  multiplyValue: U;
 
-  calculate = (): number => +this.baseValue * +this.multiplyValue;
+  calculate = (): number => +this.baseValue * +Number(this.multiplyValue);
 
-  constructor(baseValue: T, multiplyValue: T) {
+  constructor(baseValue: T, multiplyValue: U) {
     this.baseValue = baseValue;
     this.multiplyValue = multiplyValue;
   }
 }
-const simpleMath = new SimpleMath<number>(10, 20);
+const simpleMath = new SimpleMath<number, string>(10, '20');
 console.log(simpleMath.calculate());
