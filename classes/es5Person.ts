@@ -17,8 +17,8 @@ class Person {
   }
 }
 
-const person = new Person();
-person.firstName = 'Ni';
-console.log(person.firstName);
-person.firstName = 'Nikolay';
-console.log(person.firstName);
+const curPerson = new Person();
+curPerson.firstName = 'Ni';
+console.log(curPerson.firstName);
+curPerson.firstName = 'Nikolay';
+console.log(curPerson.firstName);
