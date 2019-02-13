@@ -18,5 +18,11 @@ testResults.push(6, 7, 8, 9, 10); // We can push the typed data in the Generic t
 // testResults.push('hello'); // But can't doing it with another type
 
 // Array
+// const printAll = <T>(args: T[]) => args.forEach(arg => console.log(arg));
 const printAll = <T>(args: T[]) => args.forEach(arg => console.log(arg));
 printAll<string>(['Apple', 'Banana', 'Some more']);
+
+// Generic Types
+const echo2: <T>(data: T) => T = betterEcho;
+console.log(echo2<string>('Hello there!'));
+console.log(echo2<number>(27));
