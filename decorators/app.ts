@@ -14,4 +14,20 @@ namespace Decorators {
   class Car {
     constructor() {}
   }
+
+  // More usefull decorator
+  // const printable = (constructor: Function): void =>
+  // (constructor.prototype.print = () => console.log(constructor.prototype));
+  function printable(constructor: Function): void {
+    constructor.prototype.print = function(): void {
+      console.log(this);
+    };
+  }
+
+  @printable
+  class Plant {
+    name = 'Green Plant';
+  }
+  const plant = new Plant();
+  (<any>plant).print();
 }
